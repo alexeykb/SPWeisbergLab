@@ -32,18 +32,6 @@ def read_csv_tsv(filename):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 #------------------------------------------------------------------------------------
 def extract_data_for_subpopulation(directory, donor_name, markers_to_subset, classification = None, verbose = False,
                  drop_nan = True, drop_duplicates = True, debug = False):
@@ -249,327 +237,6 @@ def extract_data_for_subpopulation(directory, donor_name, markers_to_subset, cla
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def ED_neighborhood_vector_subset_distance_cutoff_combined_norm_NEU_g_stdev_ZERO(distance_NH, 
                                             donor_name, 
                                             path, 
@@ -645,14 +312,7 @@ def ED_neighborhood_vector_subset_distance_cutoff_combined_norm_NEU_g_stdev_ZERO
         print("")
         
         
-    
-    
-
-
-    
-    
-    
-    
+      
     
         
 
@@ -822,16 +482,6 @@ def ED_neighborhood_vector_subset_distance_cutoff_combined_norm_NEU_g_stdev_ZERO
     print("^^^^^^^^")
     #display(DF_prep_BCxf)
 
-    # Here we remove Macrophage and separete on four subtypes of Macrophages
-    # -----------------------------------------------------
-    # now we create new DF just for MAC
-    # in the DF for MAC, we rename the MAC accordingly
-    # cd11 and cd169: ++/+-/-+/-- (pp/pm/mp/mm)
-    # then return to the initial DF using ID cell as a key
-    # -----------------------------------------------------
-    #print('')
-    #-------------------------------------------------
-    # -----------------------------------------------------
     # -----------------------------------------------------
 
     # before separting to subparts remove values which overelap with acinar
@@ -919,18 +569,11 @@ def ED_neighborhood_vector_subset_distance_cutoff_combined_norm_NEU_g_stdev_ZERO
   
     
     
-    #selected_DF = DF_prep_BCxf[~((DF_prep_BCxf['Phenotype'] == 'Macrophage') &
-    #        ((DF_prep_BCxf[markersdiv[0] + '_BCx'] < DF_prep_BCxf_acinar[markersdiv[0] + '_acinar_BCx'].quantile(cutoff)) |
-    #        (DF_prep_BCxf[markersdiv[1] + '_BCx'] < DF_prep_BCxf_acinar[markersdiv[1] + '_acinar_BCx'].quantile(cutoff))))] 
+   
     print('1-------')
     
     print('1-------')
-    #print(len(selected_DF))
-    #display(selected_DF)
-    
-    #DF_prep_BCxf = selected_DF
-    
-    
+
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
     
@@ -995,15 +638,6 @@ def ED_neighborhood_vector_subset_distance_cutoff_combined_norm_NEU_g_stdev_ZERO
     cd163_only_neg = cd163_only_neg.replace(['Macrophage'],'Mac_lo_CD163'); 
     
 
-    
-    
-    #macro_subclass = ['Macrophage',
-                      #'Mac_hi_CD11c__hi_CD163',
-                      #'Mac_hi_CD11c__lo_CD163',
-                      #'Mac_lo_CD11c__hi_CD163',
-                      #'Mac_lo_CD11c__lo_CD163',
-                      #'Mac_hi_CD11c',
-                      #'Mac_hi_CD163']
     
     macro_subclass_df = [all_macro,
                          pospos, 
@@ -1187,11 +821,6 @@ def ED_neighborhood_vector_subset_distance_cutoff_combined_norm_NEU_g_stdev_ZERO
         
         
         
-
-
-
-
-
 
 
 
@@ -1400,176 +1029,6 @@ def ED_neighborhood_vector_subset_distance_cutoff_combined_norm_NEU_g_stdev_ZERO
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-########
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-    
-    
     
     
     
