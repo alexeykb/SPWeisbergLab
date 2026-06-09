@@ -1,4 +1,4 @@
-# Pancreatic T/NK gene programs scored on the Massier adipose lymphocyte atlas
+# Pancreatic Tgene programs scored on the Massier adipose lymphocyte atlas
 # (clusters lyC0-lyC10; Massier et al. 2023, GEO GSE225700).
 # S3D: DotPlot of gene programs. S3E: module-score heatmap.
 
